@@ -1,6 +1,4 @@
-<h2>Home<h2>
-<br/>
-<h3>My todo list</h3>
+<h3>My ToDo List</h3>
     <p><hr size="3"/></p>
     Not done:<br />
     <% @not_done.each do |item| %>
@@ -25,7 +23,7 @@
    <p><hr size="3"/></p>
     <form method="post" action="add_item">
       New item: Done?
-	  <%=check_box("item","done")%>
+	  <%=check_box("item","done", :class => "checkbox")%>
       <%= text_field("new_item", "description") %>
-      <input type="submit" value="Add item">
+      <input type="submit" value="Add item" class="btn btn-primary">
     </form>
